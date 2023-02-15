@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Quicksand';
+  }
+  
+  body{
+    min-height: 100vh;
+    background-color: #000;
+  }
+
+
+  .section-main{
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 80px;
+    font-family:'Quicksand';
+  }
+  
+  .section-main h1{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 50px;
+    font-weight: 50;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 60px;
+    text-shadow: 0 0 3px #fff, 0 0 3px #000000;
+  }
+  
+  header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display:flexbox;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    transition: 0.6s;
+  }
+  
+  header.down{
+    background: #000000;
+    padding: 15px 80px;
+  }
+  
+  header .brand{
+    color: #550179;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+  }
+  
+  header .menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header .menu ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header .menu ul li{
+      list-style: none;
+  }
+  
+  header .menu a{
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: color, background;
+  }
+  
+  header .menu a:hover{
+    color: #000;
+    background: #fff;
+  }
+  
+  .name {
+    color: #fff;
+    align-items: center;
+    display: block;
+    
+   }
+  
+  header .btn{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  @media (max-width: 991px){
+    header, header.down{
+        padding: 20px 40px;
+    }
+    header .btn{
+      display: block;
+    }
+  
+    header .menu{
+      position: fixed;
+      background: #000000;
+      min-width: 330px;
+      height: 100vh;
+      top: 0;
+      right: -100%;
+      padding: 80px 50px;
+      transition: 0.5s;
+      transition-property: right;
+    }
+  
+    header .menu ul{
+        flex-direction: column;
+      }
+  
+    header .menu.active{
+      right: 0;
+    }
+  
+    header .menu .close-btn{
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 25px;
+    }
+  
+    header .menu a{
+      display: block;
+      font-size: 20px;
+      margin: 20px;
+      padding: 0 15px;
+    }
+  }
+  
+  @media (max-width: 600px){
+    .section-main h1{
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+  .textP{
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px; 
+    width: 50;
+    font-weight: 100; 
+    text-align: justify; 
+    margin: 0 0 25px; 
+    overflow: hidden; 
+    padding: 20px; 
+    border-radius: 35px 0px 35px 0px; 
+    -moz-border-radius: 35px 0px 35px 0px; 
+    -webkit-border-radius: 40px 0px 40px 0px; 
+    border: 2px solid #5878ca;
+ 
+    width: 50% ;
+    height: 50%;
+    
+  }
+  .textP a{
+    color: #c700fe;
+  }
+  .textP a:hover{
+   color: #07ffe6;
+  }
+  .textP p{
+    text-align: center;
+    align-items: center;
+  }
+  .textP h1{
+    
+    background-color: #bf00ff;
+    text-align: center;
+    align-items: center;
+    
+    
+  }
+
+  .cuerpo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title{
+  align-items: center;
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+
+::selection{
+  background: #7d2ae8;
+  color: #fff;
+  align-items: center;
+}
+.accordion{
+  display: flex;
+  max-width: 1010px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  
+  border-radius: 25px;
+  padding: 45px 90px 45px 60px;
+}
+.accordion .image-box{
+  height: 360px;
+  width: 300px;
+}
+.accordion .image-box img{
+  height: 100%;
+  width: 100%;
+  background: #c700fe;
+  border-radius: 10px;
+  object-fit: contain;
+}
+.accordion .accordion-text{
+  width: 60%;
+}
+.accordion .accordion-text .title{
+  font-size: 35px;
+  font-weight: 600;
+  color: #7d2ae8;
+  font-family: 'Fira Sans', sans-serif;
+}
+.accordion .accordion-text .faq-text{
+  margin-top: 25px;
+  height: 263px;
+  overflow-y: auto;
+}
+.faq-text::-webkit-scrollbar{
+  display: none;
+}
+.accordion .accordion-text li{
+  list-style: none;
+  cursor: pointer;
+}
+.accordion-text li .question-arrow{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordion-text li .question-arrow .question{
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.accordion-text li .question-arrow .arrow{
+  font-size: 20px;
+  color: #bf00ff;
+  transition: all 0.3s ease;
+}
+.accordion-text li.showAnswer .question-arrow .arrow{
+  transform: rotate(-180deg);
+}
+.accordion-text li:hover .question-arrow .question,
+.accordion-text li:hover .question-arrow .arrow{
+  color: #7d2ae8;
+}
+.accordion-text li.showAnswer .question-arrow .question,
+.accordion-text li.showAnswer .question-arrow .arrow{
+  color: #7d2ae8;
+}
+.accordion-text li .line{
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin: 10px 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.accordion-text li p{
+  width: 92%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  display: none;
+}
+.accordion-text li.showAnswer p{
+  display: block;
+}
+
+@media (max-width: 994px) {
+  body{
+    padding: 40px 20px;
+  }
+  .accordion{
+    max-width: 100%;
+    padding: 30px 60px 45px 60px;
+  }
+  .accordion .image-box{
+    height: 360px;
+    width: 220px;
+  }
+  .accordion .accordion-text{
+    width: 63%;
+  }
+}
+@media (max-width: 820px) {
+  .accordion{
+    flex-direction: column;
+  }
+  .accordion .image-box{
+    height: 360px;
+    width: 300px;
+    background: #c700fe;
+    width: 100%;
+    border-radius: 25px;
+    padding: 20px;
+  }
+  .accordion .accordion-text{
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 538px) {
+  .accordion{
+    padding: 20px;
+  }
+  .accordion-text li p{
+    width: 98%;
+  }
+}
+
+

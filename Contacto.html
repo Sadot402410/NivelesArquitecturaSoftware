@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+  <!-- fonr awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+      <a href="#" class="brand">
+      </a>
+      <nav class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        <ul>
+        	<li><a href="index.html">Home</a></li> 
+        </ul>
+      </nav>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header> <br><br><br><br><br>
+
+
+
+   //tarjeta
+   <div class="body">
+   <div class="card">
+    <div class="head">
+        <div class="circle"></div>
+        <div class="img">
+            <img src="/Image/Monolitica.png">
+        </div>
+    </div>
+
+    <div class="description">
+        <h3>Marin Juarez Angel Jesus</h3>
+        <h4>Desarrollador de la pagina</h4>
+        <p>Licenciatura en Tecnologias de la Informacion</p>
+    </div>
+
+    <div class="contact">
+       
+    </div>
+</div> 
+</div>
+
+
+<div class="body">
+<div class="card">
+    <div class="head">
+        <div class="circle"></div>
+        <div class="img">
+            <img src="/Image/ClienteS.png">
+        </div>
+    </div>
+
+    <div class="description">
+        <h3>Paredes Cervantes Sadot Israel</h3>
+        <h4>Desarrollador de la pagina</h4>
+        <p>Licenciatura en Tecnologias de la Informacion</p>
+    </div>
+
+    <div class="contact">
+        
+    </div>
+</div>
+</div>
+
+
+<div class="body">
+<div class="card">
+    <div class="head">
+        <div class="circle"></div>
+        <div class="img">
+            <img src="/Image/ModeloVC.png">
+        </div>
+    </div>
+
+    <div class="description">
+        <h3>Manuel Cruz Angel Uriel</h3>
+        <h4>Desarrollador de la pagina</h4>
+        <p>Licenciatura en Tecnologias de la Informacion</p>
+    </div>
+
+    <div class="contact">
+        
+    </div>
+</div>
+</div>
+
+<div class="body">
+    <div class="card">
+        <div class="head">
+            <div class="circle"></div>
+            <div class="img">
+                <img src="/Image/Software.png">
+            </div>
+        </div>
+    
+        <div class="description">
+            <h3>Mathus Evangelista Eliud Vladimir</h3>
+            <h4>Desarrollador de la pagina</h4>
+            <p>Licenciatura en Tecnologias de la Informacion</p>
+        </div>
+    
+        <div class="contact">
+           
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript">
+    //javascript for navigation bar effect on scroll
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector("header");
+      header.classList.toggle('down', window.scrollY > 0);
+
+	    //change logo
+	    var logo = document.querySelector(".brand img");
+		if (window.scrollY>0) {
+			logo.setAttribute('src', 'image/white.png');
+		}else{
+			logo.setAttribute('src', 'image/blue.png');
+		}
+
+    });
+
+    //javascript for responsive navigation sidebar menu
+    var menu = document.querySelector('.menu');
+    var menuBtn = document.querySelector('.menu-btn');
+    var closeBtn = document.querySelector('.close-btn');
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.add('active');
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove('active');
+    });
+    </script>
+</body>
+</html>

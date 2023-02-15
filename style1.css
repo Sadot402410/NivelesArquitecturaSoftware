@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Quicksand'; 
+  }
+  
+  body{
+    min-height: 100vh;
+    background-color: #000;
+  }
+
+
+  .section-main{
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 80px;
+    font-family:'Quicksand';
+  }
+  
+  .section-main h1{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 50px;
+    font-weight: 50;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 60px;
+    text-shadow: 0 0 3px #fff, 0 0 3px #000000;
+  }
+  
+  header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display:flexbox;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    transition: 0.6s;
+  }
+  
+  header.down{
+    background: #000000;
+    padding: 15px 80px;
+  }
+  
+  header .brand{
+    color: #550179;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+  }
+  
+  header .menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header .menu ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header .menu ul li{
+      list-style: none;
+  }
+  
+  header .menu a{
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: color, background;
+  }
+  
+  header .menu a:hover{
+    color: #000;
+    background: #fff;
+  }
+  
+  .name {
+    color: #fff;
+  
+   }
+  
+  header .btn{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  @media (max-width: 991px){
+    header, header.down{
+        padding: 20px 40px;
+    }
+    header .btn{
+      display: block;
+    }
+  
+    header .menu{
+      position: fixed;
+      background: #000000;
+      min-width: 330px;
+      height: 100vh;
+      top: 0;
+      right: -100%;
+      padding: 80px 50px;
+      transition: 0.5s;
+      transition-property: right;
+    }
+  
+    header .menu ul{
+        flex-direction: column;
+      }
+  
+    header .menu.active{
+      right: 0;
+    }
+  
+    header .menu .close-btn{
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 25px;
+    }
+  
+    header .menu a{
+      display: block;
+      font-size: 20px;
+      margin: 20px;
+      padding: 0 15px;
+    }
+  }
+  
+  @media (max-width: 600px){
+    .section-main h1{
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+  /* Card*/
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #fbfbfb;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .5s;
+    margin: 15px 20px;
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(171, 9, 0, 0.99);
+    transform: translateY(-15px);
+}
+
+.card .head {
+    height: 125px;
+    width: 100%;
+    position: relative;
+}
+
+.card .head .circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #9a01c0;
+    bottom: 0;
+}
+
+.card .head .img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.card .head .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.card .description {
+    height: 200px;
+    padding: 40px 20px 20px 20px;
+    border-bottom: solid 1px rgba(6, 74, 76, .18);
+    text-align: center;
+}
+
+.card .description h3 {
+    color: #0072ed;
+}
+
+.card .description h4 {
+    color: #ff007b;
+}
+
+.card .description p {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+
+.card .contact {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .contact a {
+    text-decoration: none;
+    color: #fff;
+    background: #157579;
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.card .contact a:hover {
+    
+    background: #0b6164;
+   
+}
